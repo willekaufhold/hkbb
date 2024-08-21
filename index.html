@@ -6,9 +6,9 @@
     <title>Lindsay and Will's Big News</title>
     <style>
         body {
-            background-color: #f5deb3; /* Warm, pastel yellow */
-            color: #2f4f4f; /* Dark Slate Gray for text */
-            font-family: 'Futura', Arial, sans-serif; /* Futura for that Wes Anderson vibe */
+            background-color: #ffe4e1; /* Light Pink */
+            color: #333;
+            font-family: 'Futura', Arial, sans-serif; /* Futura for a bold, clean look */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -16,43 +16,119 @@
             margin: 0;
             flex-direction: column;
             text-align: center;
+            overflow: hidden;
         }
         h1 {
-            font-size: 3.5em;
-            color: #8b4513; /* SaddleBrown */
+            font-size: 4em;
+            color: #ff69b4; /* Hot Pink */
             margin-bottom: 0.5em;
             text-transform: uppercase;
             letter-spacing: 0.1em;
+            animation: bounce 1.5s infinite alternate;
         }
         p {
-            font-size: 1.2em;
-            color: #8b4513; /* Matching the header */
+            font-size: 2em;
+            color: #ff1493; /* Deep Pink */
             margin-bottom: 2em;
+            animation: spin 4s linear infinite;
+        }
+        .hearts {
+            font-size: 2.5em;
+            margin: 20px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+        .heart-emoji {
+            font-size: 2em;
+            margin: 0 5px;
+            display: inline-block;
         }
         .border {
-            width: 60%; /* Adjusted for better balance */
+            width: 80%;
             padding: 20px;
-            border: 5px solid #deb887; /* BurlyWood */
-            background-color: #fffaf0; /* FloralWhite */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            border: 5px dashed #ffb6c1; /* Light Pink */
+            background-color: #e6e6fa; /* Lavender */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: wiggle 2s infinite;
         }
         .divider {
-            width: 50%; /* Centered and balanced */
-            height: 2px;
-            background-color: #8b4513; /* Matches the text color */
-            margin: 20px auto; /* Center the divider */
+            width: 60%;
+            height: 4px;
+            background-color: #ff69b4; /* Matches the header */
+            margin: 20px auto;
+            animation: slideIn 2s ease-in-out infinite alternate;
         }
-        .centered {
-            text-align: center;
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(-10px); }
+            50% { transform: translateY(10px); }
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+        @keyframes slideIn {
+            0% { width: 60%; }
+            100% { width: 80%; }
+        }
+        .floating-hearts {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0.8;
+            animation: floatHearts 10s ease-in-out infinite;
+        }
+        .floating-hearts .heart-emoji {
+            font-size: 2em;
+            margin: 10px;
+            animation: randomFloat 5s ease-in-out infinite;
+        }
+        @keyframes floatHearts {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes randomFloat {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(20px, -10px); }
+            50% { transform: translate(-10px, 20px); }
+            75% { transform: translate(-20px, -20px); }
+            100% { transform: translate(10px, 10px); }
         }
     </style>
 </head>
 <body>
     <div class="border">
         <h1>Lindsay and Will are having a baby!</h1>
+        <div class="hearts">💖💛💚💙💜💗💓💞💕</div>
         <div class="divider"></div>
-        <p class="centered">A new adventure begins.</p>
+        <p>A new adventure begins!</p>
+        <div class="hearts">💘💝💖💗💓💞💕💟💜</div>
+    </div>
+    <div class="floating-hearts">
+        <div class="heart-emoji">💖</div>
+        <div class="heart-emoji">💛</div>
+        <div class="heart-emoji">💚</div>
+        <div class="heart-emoji">💙</div>
+        <div class="heart-emoji">💜</div>
+        <div class="heart-emoji">💗</div>
+        <div class="heart-emoji">💓</div>
+        <div class="heart-emoji">💞</div>
+        <div class="heart-emoji">💕</div>
     </div>
 </body>
 </html>
