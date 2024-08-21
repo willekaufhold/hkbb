@@ -3,51 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exciting News!</title>
+    <title>A New Adventure Begins</title>
     <style>
         body {
+            background-color: #f5deb3; /* A warm, pastel yellow */
+            color: #2f4f4f; /* Dark Slate Gray for text */
+            font-family: 'Courier New', Courier, monospace; /* Typewriter-style font */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: 'Helvetica Neue', Arial, sans-serif; /* Updated font */
-            background-color: #ffe4e1; /* Light pink background */
-            color: #333;
             flex-direction: column;
             text-align: center;
         }
         h1 {
-            font-size: 3em;
-            color: #ff69b4; /* Hot pink */
+            font-size: 3.5em;
+            color: #8b4513; /* SaddleBrown */
             margin-bottom: 0.5em;
-            animation: fadeIn 2s ease-in-out;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
         p {
-            font-size: 1.5em;
-            color: #ff1493; /* Deep pink */
+            font-size: 1.2em;
+            color: #8b4513; /* Matching the header */
+            margin-bottom: 2em;
         }
-        .hearts {
-            font-size: 2em;
-            color: #ffb6c1; /* Light pink */
-            animation: pulse 1.5s infinite;
+        .border {
+            width: 80%;
+            padding: 20px;
+            border: 5px solid #deb887; /* BurlyWood */
+            background-color: #fffaf0; /* FloralWhite */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .divider {
+            width: 60%;
+            height: 2px;
+            background-color: #8b4513; /* Matches the text color */
+            margin: 20px 0;
         }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+        .centered {
+            text-align: center;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #8b4513; /* SaddleBrown */
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #a0522d; /* Sienna */
         }
     </style>
 </head>
 <body>
-    <div class="hearts">💖💖💖</div>
-    <h1>Lindsay and Will are having a baby!</h1>
-    <p>Yay!!!!</p>
-    <div class="hearts">💖💖💖</div>
+    <div class="border">
+        <h1>A New Adventure Begins</h1>
+        <p>In the grand story of life, a new chapter is unfolding.</p>
+        <div class="divider"></div>
+        <p class="centered">Lindsay and Will</p>
+        <div class="buttons">
+            <a href="#" class="button">Explore</a>
+            <a href="#" class="button">More Info</a>
+        </div>
+    </div>
 </body>
 </html>
 
