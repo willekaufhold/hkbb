@@ -39,7 +39,7 @@
         }
         .heart-emoji {
             font-size: 2em;
-            margin: 0 5px;
+            margin: 10px;
             display: inline-block;
         }
         .border {
@@ -81,16 +81,21 @@
         }
         .floating-hearts {
             position: absolute;
-            top: 10%;
-            left: 0;
-            right: 0;
+            top: 0;
+            bottom: 0;
             margin: auto;
-            width: 100%;
+            width: 50px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            flex-wrap: wrap;
             opacity: 0.8;
             animation: floatHearts 10s ease-in-out infinite;
+        }
+        .floating-hearts.left {
+            left: 0;
+        }
+        .floating-hearts.right {
+            right: 0;
         }
         .floating-hearts .heart-emoji {
             font-size: 2em;
@@ -119,7 +124,18 @@
         <p>A new adventure begins!</p>
         <div class="hearts">💘💝💖💗💓💞💕💟💜</div>
     </div>
-    <div class="floating-hearts">
+    <div class="floating-hearts left">
+        <div class="heart-emoji">💖</div>
+        <div class="heart-emoji">💛</div>
+        <div class="heart-emoji">💚</div>
+        <div class="heart-emoji">💙</div>
+        <div class="heart-emoji">💜</div>
+        <div class="heart-emoji">💗</div>
+        <div class="heart-emoji">💓</div>
+        <div class="heart-emoji">💞</div>
+        <div class="heart-emoji">💕</div>
+    </div>
+    <div class="floating-hearts right">
         <div class="heart-emoji">💖</div>
         <div class="heart-emoji">💛</div>
         <div class="heart-emoji">💚</div>
